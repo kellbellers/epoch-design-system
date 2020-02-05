@@ -1,0 +1,59 @@
+@import url("https://use.typekit.net/kir7vhv.css");
+
+/*================================
+Typography
+==================================*/
+
+html {
+	color: #1F2D3D;
+	font-family: Futura-pt, Arial, Sans-serif;
+}
+
+a {
+	color: #E582F5
+}
+
+
+/*================================
+Header Component
+==================================*/
+header {
+	background-color: #011E85;
+	color: #F3D2F9;
+	padding: 2rem;
+}
+
+header a {
+	color: #F3D2F9;
+	text-decoration: none;
+}
+
+header li {
+	list-style: none;
+}
+
+.site-logo {
+	font-size: 2.5rem;
+}
+
+/*================================
+Footer Component
+==================================*/
+
+footer {
+	background-color: #7B8ECF;
+	color: #F9FAFC;
+	padding: 2rem;
+}
+
+footer a {
+	color: #F3D2F9;
+}
+
+footer li {
+	list-style: none;
+}
+
+footer nav a {
+	text-decoration: none;
+}
