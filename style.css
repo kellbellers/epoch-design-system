@@ -1,4 +1,14 @@
 @import url("https://use.typekit.net/kir7vhv.css");
+@import url(//db.onlinewebfonts.com/c/6601fbe65008cbf2efe6b69f04759256?family=GT+Haptik+Bold);
+@font-face {font-family: "GT Haptik Bold"; 
+			src: url("//db.onlinewebfonts.com/t/6601fbe65008cbf2efe6b69f04759256.eot"); 
+			src: url("//db.onlinewebfonts.com/t/6601fbe65008cbf2efe6b69f04759256.eot?#iefix") format("embedded-opentype"), 
+			url("//db.onlinewebfonts.com/t/6601fbe65008cbf2efe6b69f04759256.woff2") format("woff2"), 
+			url("//db.onlinewebfonts.com/t/6601fbe65008cbf2efe6b69f04759256.woff") format("woff"), 
+			url("//db.onlinewebfonts.com/t/6601fbe65008cbf2efe6b69f04759256.ttf") format("truetype"), 
+			url("//db.onlinewebfonts.com/t/6601fbe65008cbf2efe6b69f04759256.svg#GT Haptik Bold") format("svg"); 
+		}
+
 
 /*================================
 Colors
@@ -120,14 +130,59 @@ html {
 
 
 /*================================
-Master Layout & Typography
+Typography
 ==================================*/
 
 html {
-	color: var(--color-black);
-	font-family: Futura-pt, Arial, sans-serif;
+
+	
 	--font-primary: 'Futura-pt', 'Arial', sans-serif;
+
+	--ratio: 1.22;
+	--size-one: calc(var(--size-two) * var(--ratio));
+	--size-two: calc(var(--size-three) * var(--ratio));
+	--size-three: calc(var(--size-four) * var(--ratio));
+	--size-four: calc(var(--size-five) * var(--ratio));
+	--size-five: calc(var(--size-six) * var(--ratio));
+	--size-six: calc(1rem * var(--ratio));
+	--size-seven: calc(var(--size-one) * var(--ratio));
+
+	color: var(--color-black);
+	font-family: 'Futura-pt', "GT Haptik Bold", Arial, sans-serif;
 	line-height: 1.5rem;
+}
+
+
+h1, h2, h3, h4. h5. h6 {
+	font-family: "GT Haptik Bold", 'Futura-pt', Arial, sans-serif;
+	margin-top: 1.3em;
+	line-height: 2;
+}
+
+h1 {
+	font-size: var(--size-one);
+	line-height: 2.2rem;
+}
+
+
+h2 {
+	font-size: var(--size-two);
+}
+
+h3 {
+	font-size: var(--size-three);
+}
+
+h4 {
+	font-size: var(--size-four);
+}
+
+h5 {
+	font-size: var(--size-five);
+}
+
+h6 {
+	font-size: var(--size-size);
 }
 
 a {
@@ -135,17 +190,12 @@ a {
 	text-decoration: none;
 }
 
-main {
-	margin: auto;
-	max-width: 70rem;
-}
-
 a:visited {
 	color: var(--color-teal-muted-light);
 }
 
 a:hover {
-	color: underline;
+	color: var(--color-teal-muted-light-extra);
 }
 
 a:focus {
@@ -164,6 +214,8 @@ header {
 	background-color: var(--color-teal-muted-light-extra);
 	color: var(--color-bubblegum-light);
 	padding: 2rem;
+	font-size: 1.2rem;
+	line-height: 1.8rem;
 }
 
 header a {
@@ -177,14 +229,15 @@ header li {
 
 .site-logo {
 	color: var(--color-blue-true);
-	font-size: 2.5rem;
+	font-size: 3.5rem;
+	font-weight: bold;
+	line-height: 1.2;
 }
 
 
 header a:visited {
 	color: var(--color-blue-true);
 }
-
 
 header nav a:visited {
 	color: var(--color-cherry-muted);
@@ -202,6 +255,38 @@ header nav a:active {
 	color: var(--color-purple);
 }
 
+/*================================
+Main Component
+==================================*/
+
+main {
+	margin: auto;
+	max-width: 70rem;
+	padding: 1rem 2rem;
+
+}
+
+.figure-box {
+	text-align: center;
+}
+
+.color-swatch{
+	margin: .2rem;
+}
+
+.text-color-group {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.featured-text p {
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+
+.tertiary-text p {
+	color: var(--color-slate);
+}
 
 /*================================
 Footer Component
