@@ -16,8 +16,8 @@
 			<ul>
 				<li><a href="index.html">Home</a></li>
 				<li><a href="style.html">Style</a></li>
-				<li><a href="components.html">Components</a></li>
-				<li><a href="layout.html">Layout</a></li>
+				<li><a class="current-page" href="components.html">Components</a></li>
+				<li><a href="layouts.html">Layout</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -135,6 +135,25 @@
 
 		</section>
 
+		<section>
+			<h2>Modal Dialog</h2>
+			
+			<figure>
+				<button id="open-modal" type="button">Open Modal</button>
+
+				<dialog id="modal-demo">
+					<h3>Dare to Doubt</h3>
+
+					<p>"When we dare to doubt what we are told and take a fresh look at what's going on, we are in for lots of pleasant and fascinating and useful surprises. A new and more satisfying way of life begins to open up, just by noticing what we see."</p>
+
+					<p>- Douglas Harding</p>
+					
+				</dialog>
+			</figure>
+
+
+		</section>
+
 	</main>
 
 
@@ -153,6 +172,27 @@
 			</ul>
 		</nav>
 	</footer>
+
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function(){
+
+		const modal = document.querySelector('dialog');
+		const open = document.getElementById('open-modal');
+
+		open.addEventListener('click', () => {
+		modal.showModal();
+		});
+
+		modal.addEventListener('click', event => {
+		if (event.target === modal) {
+		modal.close('cancelled');
+		}
+		});
+
+		});
+	</script>
+
 
 </body>
 

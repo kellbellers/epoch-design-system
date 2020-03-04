@@ -17,16 +17,16 @@ html {
 	--color-blue-muted-light: #8EADDA;
 	--color-blue-muted-light-extra: #CAD8ED;
 
-	--color-lime: #EFFC64;
-	--color-lime-true: #EBFF00;
-	--color-lime-light: #F7FDB4;
-	--color-lime-light-extra: #FCFFDE;
-	--color-lime-dark: #A1AE09;
-	--color-lime-dark-extra: #6C7504;
-	--color-lime-muted: #A9B145;
-	--color-lime-muted-deep: #686B45;
-	--color-lime-muted-light: #D5DA9B;
-	--color-lime-muted-light-extra: #ECEECF;
+	--color-orange: #FFAE63;
+	--color-orange-true: #FF7E06;
+	--color-orange-light: #FFD2A9;
+	--color-orange-light-extra: #FFECDA;
+	--color-orange-dark: #AA5303;
+	--color-orange-dark-extra: #623002;
+	--color-orange-muted: #B7804E;
+	--color-orange-muted-deep: #745C46;
+	--color-orange-muted-light: #C3A88F;
+	--color-orange-muted-light-extra: #ECD8C7;
 
 	--color-sky: #78D5FD;
 	--color-sky-true: #09B3FC;
@@ -211,7 +211,7 @@ a:active {
 Header Component
 ==================================*/
 header {
-	background-color: var(--color-bubblegum-muted-light-extra);
+	background-color: var(--color-blue-dark-extra);
 	color: var(--color-bubblegum-light);
 	padding: 2rem;
 	font-size: 1.2rem;
@@ -219,7 +219,7 @@ header {
 }
 
 header a {
-	color: var(--color-cherry-true);
+	color: var(--color-teal-light);
 	text-decoration: none;
 }
 
@@ -228,7 +228,7 @@ header li {
 }
 
 .site-logo {
-	color: var(--color-blue-true);
+	color: var(--color-cherry);
 	font-size: 3.5rem;
 	font-weight: bold;
 	line-height: 1.2;
@@ -236,15 +236,15 @@ header li {
 
 
 header a:visited {
-	color: var(--color-blue-true);
+	color: var(--color-cherry);
 }
 
 header nav a:visited {
-	color: var(--color-cherry-muted);
+	color: var(--color-sky);
 }
 
 header nav a:hover {
-	color: var(--color-teal-light-extra);
+	color: var(--color-bubblegum-light);
 }
 
 header nav a:focus {
@@ -253,6 +253,11 @@ header nav a:focus {
 
 header nav a:active {
 	color: var(--color-purple);
+	text-decoration: none;
+}
+
+header nav .current-page {
+	color: var(--color-bubblegum-light);
 }
 
 /*================================
@@ -387,7 +392,7 @@ Link Button Component
 .link-button-primary-light, .link-button-primary-light:visited {
 	background-color: var(--color-grapefruit-light) ;
 	border-radius: .6rem;
-	color: var(--color-sky-dark);
+	color: var(--color-sky-dark-extra);
 	display: inline-block;
 	padding: .6rem 2rem;
 	margin: .5rem;
@@ -527,6 +532,54 @@ details[open] div p {
 	margin: .2em;
 }
 
+summary:focus {
+	outline: none;
+}
+
+/*======================================
+Dialog Component
+=======================================*/
+
+dialog { 
+	animation: slide-in-down 1s ease-out;
+	border-radius: .4rem;
+	max-width: 24rem;
+	padding: 0 1.6rem 1rem;
+}
+
+dialog::backdrop {
+	animation: opacity-to-half 1.5s;
+	background-color: rgba(98, 79, 172, .15);
+	background-image: url(https://i.pinimg.com/originals/6d/93/9b/6d939b4def6fceacdc63c0ed887311a2.jpg);
+	opacity: .5;
+}
+
+
+@keyframes slide-in-down {
+
+	0% {
+		opacity: 0;
+		transform: translateY(-10rem);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+}
+
+@keyframes opacity-to-half {
+	
+	0% {
+		opacity: 0;
+	}
+	
+	100% {
+		opacity: .5;
+	}
+	
+}
 
 /*================================
 Footer Component
