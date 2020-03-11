@@ -150,7 +150,99 @@
 					
 				</dialog>
 			</figure>
+		</section>
 
+		<section>
+			<h2>Form Inputs</h2>
+
+			
+			<h3>Text</h3>
+			
+			<div class="example">
+				<figure>
+					<label for="standard-text">Standard</label>
+					<input type="text" id="standard-text"  name="standard" placeholder="Example Text">
+				</figure>
+
+				<figure>
+					<label for="error-text">Error</label>
+					<input type="text" id="error-text" name="error" placeholder="Example Text" class="error">
+					<p class="error-text">Oops, something went wrong. Try again.</p>
+				</figure>
+
+				<figure>
+					<label for="disabled-text">Disabled</label>
+					<input type="text" id="disabled-text" class="disabled-input" name="disabled" placeholder="Example Text" disabled>
+				</figure>
+			</div>
+
+			
+			<h3>Text Area</h3>
+			
+			<div class="example">
+				<figure>
+					<label for="standard-textarea">Standard Text Area</label>
+					<textarea id="standard-textarea" name="standard" placeholder="Enter Your Text Here"></textarea>
+					<p class="helper-text">This is some helper text, microcopy, etc.</p>
+				</figure>
+
+				<figure>
+					<label for="error-textarea">Error Text Area</label>
+					<textarea id="error-textarea" class="error" placeholder="Enter Your Text Here"></textarea>
+					<p class="error-text">Oops, something went wrong. Try again.</p>
+				</figure>
+
+				<figure>
+					<label for="disabled-textarea">Disabled Text Area</label>
+					<textarea id="disabled-textarea" class="disabled-input" placeholder="Enter Your Text Here" disabled></textarea>
+				</figure>
+			</div>
+
+			
+				<h3>Select</h3>
+
+			<div class="example">
+				<figure>
+					<label>Standard Select</label>
+					<select>
+						<option value="" selected disabled hidden>Choose</option>
+						<option>Option 1</option>
+						<option>Option 2</option>
+						<option>Option 3</option>
+					</select>
+				</figure>
+
+				<figure>
+					<label>Error Select</label>
+					<select>
+						<option value="" selected disabled hidden>Choose</option>
+						<option>Option 1</option>
+						<option>Option 2</option>
+						<option>Option 3</option>
+					</select>
+					<p class="error-text">Oops, something went wrong. Try again.</p>
+				</figure>
+
+				<figure>
+					<label>Disabled Select</label>
+					<select class="disabled-input" disabled>
+						<option value="" selected disabled hidden>Choose</option>
+						<option>Option 1</option>
+						<option>Option 2</option>
+						<option>Option 3</option>
+					</select>
+				</figure>
+			</div>
+
+			
+			<h3>Submit</h3>
+			
+			<div class="example">
+				<figure>
+					<button>Submit</button>
+				</figure>
+			
+			</div>
 
 		</section>
 

@@ -208,7 +208,7 @@ a:active {
 }
 
 /*================================
-Header Component
+Header Components
 ==================================*/
 header {
 	background-color: var(--color-blue-dark-extra);
@@ -261,7 +261,7 @@ header nav .current-page {
 }
 
 /*================================
-Main Component
+Main Components
 ==================================*/
 
 main {
@@ -291,13 +291,13 @@ Examples Component
 
 .example {
 	border: .1rem solid #DDD;
-	border-radius: .3rem;
+	border-radius: .4rem;
 	margin: 0;
 }
 
 
 /*================================
-Typefaces Component
+Typeface Components
 ==================================*/
 
 .futura-pt-light {
@@ -386,7 +386,7 @@ Typefaces Component
 
 
 /*=============================================
-Link Button Component
+Link Button Components
 ===============================================*/
 
 .link-button-primary-light, .link-button-primary-light:visited {
@@ -502,7 +502,7 @@ Link Button Component
 
 
 /*=============================================
-Accordions Component
+Accordion Components
 ===============================================*/
 
 details {
@@ -537,7 +537,7 @@ summary:focus {
 }
 
 /*======================================
-Dialog Component
+Dialog Components
 =======================================*/
 
 dialog { 
@@ -550,7 +550,7 @@ dialog {
 dialog::backdrop {
 	animation: opacity-to-half 1.5s;
 	background-color: rgba(98, 79, 172, .15);
-	background-image: url(https://i.pinimg.com/originals/6d/93/9b/6d939b4def6fceacdc63c0ed887311a2.jpg);
+	background-image: url(images/pinkclouds.jpg);
 	opacity: .5;
 }
 
@@ -579,6 +579,61 @@ dialog::backdrop {
 		opacity: .5;
 	}
 	
+}
+
+/*======================================
+Forms Components
+=======================================*/
+label, input, select, textarea {
+	display: block;
+}
+
+[type="text"], textarea, select {
+	padding: .6rem;
+	max-width: 25rem;
+	width: 100%;
+}
+
+textarea {
+	min-height: 6rem;
+}
+
+
+[type="submit"], button {
+	background-color: var(--color-sky-muted) ;
+	border-radius: .5rem;
+	color: var(--color-blue-light-extra);
+	display: inline-block;
+	padding: .6rem 2rem;
+	margin: .5rem;
+}
+
+[type="submit"]:hover, [type="submit"]:focus, button:hover, button:focus {
+	background-color: var(--color-sky-dark);
+	color: var(--color-snow);
+	outline: none;
+}
+
+[type="submit"]:active, button:active {
+	background-color: var(--color-cherry-muted) ;
+}
+
+.helper-text {
+	font-size: .7rem;
+}
+
+.error-text {
+	color: red;
+	font-size: .7rem;
+}
+
+.error {
+	border-color: red;
+}
+
+.disabled-input {
+	background-color: rgba(148, 148, 148, .3);
+	border-color: var(--color-slate);
 }
 
 /*================================
