@@ -128,7 +128,7 @@ html {
 	
 	--font-primary: 'Futura-pt', 'Arial', sans-serif;
 
-	--ratio: 1.20;
+	--ratio: 1.165;
 	--size-one: calc(var(--size-two) * var(--ratio));
 	--size-two: calc(var(--size-three) * var(--ratio));
 	--size-three: calc(var(--size-four) * var(--ratio));
@@ -145,32 +145,49 @@ html {
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Futura-pt', Arial, sans-serif;
-	line-height: 1;
+	line-height: 1.15;
 }
 
 h1 {
 	font-size: var(--size-one);
+	font-style: normal;
+	font-weight: 750;
 }
 
+.primary-headings {
+	text-align: center;
+}
 
 h2 {
 	font-size: var(--size-two);
+	font-style: normal;
+	font-weight: 650;
+	margin: 4rem 0 .7rem 0;
 }
 
 h3 {
 	font-size: var(--size-three);
+	font-style: normal;
+	font-weight: 600;
+	margin: 2rem 0 1rem 0;
 }
 
 h4 {
 	font-size: var(--size-four);
+	font-style: normal;
+	font-weight: 600;
 }
 
 h5 {
 	font-size: var(--size-five);
+	font-style: normal;
+	font-weight: 550;
 }
 
 h6 {
 	font-size: var(--size-size);
+	font-style: normal;
+	font-weight: 550;
 }
 
 a {
@@ -179,11 +196,11 @@ a {
 }
 
 a:visited {
-	color: var(--color-teal-muted-light);
+	color: var(--color-teal-muted);
 }
 
 a:hover {
-	color: var(--color-teal-muted-light-extra);
+	color: var(--color-teal-muted-light);
 }
 
 a:focus {
@@ -195,40 +212,59 @@ a:active {
 }
 
 .featured-text {
+	color: var(--color-bubblegum-dark);
 	font-size: 1.5rem;
 	font-weight: 500;
+	text-align: center;
 }
 
 .tertiary-text {
 	color: var(--color-slate);
+	text-align: center;
 }
 
-.design-system-styles h1 {
+.primary-headings {
 	line-height: 3.5rem;
+}
+
+.block-quotes {
+	border-left: 4.5px solid var(--color-bubblegum-muted-light);
+	padding: .4rem 1.2rem;
+}
+
+.block-quotes p {
+	margin: .4rem 0 1rem 0;
 }
 
 /*================================
 Header Components
 ==================================*/
 header {
-	background-color: var(--color-blue-dark-extra);
-	color: var(--color-bubblegum-light);
-	padding: 2rem;
+	background-color: var(--color-blue-light-extra);
+	color: var(--color-bubblegum-true);
 	font-size: 1.2rem;
 	line-height: 1.8rem;
+	padding: 2rem;
+	text-align: center;
 }
 
-header a {
-	color: var(--color-teal-light);
+header nav ul {
+	padding-left: 0;
+}
+
+header nav li {
+	list-style: none;
+	margin: .1rem;
+}
+
+header nav a {
+	color: var(--color-bubblegum-true);
+	padding: .12rem .8rem;
 	text-decoration: none;
 }
 
-header li {
-	list-style: none;
-}
-
 .site-logo {
-	color: var(--color-cherry);
+	color: var(--color-bubblegum-true);
 	font-size: 3.5rem;
 	font-weight: bold;
 	line-height: 1.2;
@@ -236,15 +272,15 @@ header li {
 
 
 header a:visited {
-	color: var(--color-cherry);
+	color: var(--color-bubblegum-true);
 }
 
 header nav a:visited {
-	color: var(--color-sky);
+	color: var(--color-bubblegum-dark);
 }
 
 header nav a:hover {
-	color: var(--color-bubblegum-light);
+	color: var(--color-bubblegum-muted-light);
 }
 
 header nav a:focus {
@@ -252,12 +288,37 @@ header nav a:focus {
 }
 
 header nav a:active {
-	color: var(--color-purple);
+	color: var(--color-bubblegum-light);
 	text-decoration: none;
 }
 
-header nav .current-page {
-	color: var(--color-bubblegum-light);
+.current-page-primary {
+	/*color: var(--color-teal-true);*/
+	background-color: rgba(31, 238, 238, .3);
+}
+
+@media (min-width: 630px) {
+	
+	header {
+		display: flex;
+		justify-content: space-between;
+		padding: 3rem 2.2rem;
+	}
+
+	header nav ul {
+		display: flex;
+		justify-content: space-between;
+	}
+
+}
+
+/*================================
+Body Components
+==================================*/
+
+body {
+	margin: 0;
+
 }
 
 /*================================
@@ -265,8 +326,10 @@ Main Components
 ==================================*/
 
 main {
+	background-color: #FFF;
+	border-radius: .4rem;
 	margin: auto;
-	max-width: 54rem;
+	max-width: 43rem;
 	padding: 1rem 2rem;
 
 }
@@ -281,20 +344,16 @@ Examples Component
 }
 
 .color-swatch{
-	margin: .2rem;
-}
-
-.text-color-group {
-	text-align: center;
-	margin: 0 auto;
+	margin: .35rem;
 }
 
 .example {
-	border: .1rem solid #DDD;
+	border: .1rem solid #EAEAEA;
 	border-radius: .4rem;
-	margin: 0;
+	margin: 0 auto;
+	max-width: 42rem;
+	padding: .8rem;
 }
-
 
 /*================================
 Typeface Components
@@ -505,7 +564,7 @@ Link Button Components
 Accordion Components
 ===============================================*/
 
-details {
+.accordion {
 	border-bottom: 1px solid #ccc;
 	padding: .5rem 0;
 }
@@ -520,12 +579,12 @@ details[open] div {
 }
 
 details[open] summary {
-	color: var(--color-cherry);
+	color: var(--color-bubblegum-muted);
 }
 
 
 details[open] summary::-webkit-details-marker {
-	color: var(--color-cherry-true);
+	color: var(--color-bubblegum-dark);
 }
 
 details[open] div p {
@@ -534,6 +593,7 @@ details[open] div p {
 
 summary:focus {
 	outline: none;
+	background-color: var(--color-snow);
 }
 
 /*======================================
@@ -541,7 +601,7 @@ Dialog Components
 =======================================*/
 
 dialog { 
-	animation: slide-in-down 1s ease-out;
+	animation: spin-grow 1s ease-out;
 	border-radius: .4rem;
 	max-width: 24rem;
 	padding: 0 1.6rem 1rem;
@@ -555,16 +615,16 @@ dialog::backdrop {
 }
 
 
-@keyframes slide-in-down {
+@keyframes spin-grow {
 
 	0% {
 		opacity: 0;
-		transform: translateY(-10rem);
+		transform: rotate(0deg) scale(0);
 	}
 
 	100% {
 		opacity: 1;
-		transform: translateY(0);
+		transform: rotate(360deg) scale(1);
 	}
 
 }
@@ -636,9 +696,125 @@ textarea {
 	border-color: var(--color-slate);
 }
 
+
+/*=============================================
+Navigation Components
+===============================================*/
+
+.nav-primary {
+	text-align: center;
+}
+
+.nav-primary ul {
+	padding-left: 0;
+}
+
+.nav-primary li {
+	list-style: none;
+	margin: .3rem;
+}
+
+.nav-primary a {
+	color: var(--color-bubblegum-true);
+	padding: .12rem .8rem;
+	text-decoration: none;
+}
+
+.nav-primary a:visited {
+	color: var(--color-bubblegum-dark);
+}
+
+.nav-primary a:hover {
+	color: var(--color-bubblegum-muted-light);
+}
+
+.nav-primary a:focus {
+	text-decoration: underline;
+}
+
+.nav-primary a:active {
+	color: var(--color-bubblegum-light);
+	text-decoration: none;
+}
+
+.nav-secondary {
+	margin: auto;
+	max-width: 20rem;
+	display: flex;
+	flex-direction: column;
+	align-items: baseline;
+}
+
+.nav-secondary li {
+	list-style: none;
+	margin: .3rem;
+}
+
+.nav-secondary a {
+	color: var(--color-bubblegum-muted-deep);
+	padding: .12rem .5rem;
+}
+
+.nav-secondary a:visited {
+	color: var(--color-bubblegum-muted-deep);
+}
+
+.nav-secondary a:hover {
+	color: var(--color-bubblegum-muted-light);
+}
+
+.nav-secondary a:focus {
+	text-decoration: underline;
+}
+
+.nav-secondary a:active {
+	color: var(--color-bubblegum-light);
+	text-decoration: none;
+}
+
+.nav-secondary-nested a, .nav-secondary-nested a:visited {
+	color: var(--color-bubblegum-muted);
+}
+
+.nav-secondary-nested a:hover {
+	color: var(--color-bubblegum-muted-light);
+}
+
+.nav-secondary-nested a:focus {
+	text-decoration: underline;
+}
+
+.nav-secondary-nested a:active {
+	color: var(--color-bubblegum-light);
+	text-decoration: none;
+}
+
+.current-page-secondary {
+	font-weight: 700;
+}
+
+.nav-secondary-summary::-webkit-details-marker, .nav-secondary-details[open] .nav-secondary-summary::-webkit-details-marker {
+	/*color: transparent;*/
+	margin: 0 .3rem 0 0;
+}
+
+@media (min-width: 540px) {
+
+	.nav-primary ul {
+		display: flex;
+		justify-content: center;
+	}
+
+}
+
 /*================================
 Footer Component
 ==================================*/
+
+.footer-text {
+	max-width: 39rem;
+	margin: 0 auto;
+}
 
 footer {
 	background-color: var(--color-blue-muted-deep);
@@ -646,14 +822,51 @@ footer {
 	padding: 2rem;
 }
 
-footer a {
-	color: var(--color-cherry-light);
+footer nav {
+	text-align: center;
 }
 
-footer li {
+
+footer a {
+	color: var(--color-teal-light);
+	text-decoration: none;
+	padding: .12rem .8rem;
+}
+
+footer a:visited {
+	color: var(--color-teal-muted-light);
+}
+
+footer a:hover {
+	background-color: rgba(249, 37, 227, .15);
+}
+
+footer a:focus {
+	text-decoration: underline;
+}
+
+footer a:active {
+	color: var(--color-teal-true);
+}
+
+footer nav li {
 	list-style: none;
+	margin: .1rem;
+}
+
+footer nav ul {
+	padding-left: 0;
 }
 
 footer nav a {
 	text-decoration: none;
+}
+
+@media (min-width: 630px) {
+	
+	footer nav ul {
+		display: flex;
+		justify-content: center;
+	}
+
 }

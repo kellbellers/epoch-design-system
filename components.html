@@ -10,20 +10,20 @@
 <body>
 
 	<header>
-		<a href="index.html" class="site-logo">Epoch Design System</a>
+		<a href="index.html" class="site-logo">EPOCH</a>
 
 		<nav>
 			<ul>
 				<li><a href="index.html">Home</a></li>
 				<li><a href="style.html">Style</a></li>
-				<li><a class="current-page" href="components.html">Components</a></li>
+				<li><a class="current-page-primary" href="components.html">Components</a></li>
 				<li><a href="layouts.html">Layout</a></li>
 			</ul>
 		</nav>
 	</header>
 
 	<main>
-		<h1>Epoch Design System Components</h1>
+		<h1 class="primary-headings">Epoch Design System Components</h1>
 
 		<section>	
 			<h2>Button Links</h2>
@@ -88,7 +88,7 @@
 
 			<div class="example">
 				<figure>
-					<details>
+					<details class="accordion">
 						<summary>What package or level of service do I need?</summary>
 						<div>
 							<p>Planning an event can be a HUGE amount of work. There are countless hours of research, vendor emails and phone calls, decisions to be made, contracts to review and sign. You probably suspect that you need a planner to help navigate through the process, but on what level?</p>
@@ -110,7 +110,7 @@
 
 					</details>
 
-					<details>
+					<details class="accordion">
 						<summary>How many years has Happening Event Productions been in business?</summary>
 
 						<div>
@@ -119,7 +119,7 @@
 
 					</details>
 
-					<details>
+					<details class="accordion">
 
 						<summary>How do I reserve my date with Happening Event Productions?</summary>
 
@@ -138,18 +138,21 @@
 		<section>
 			<h2>Modal Dialog</h2>
 			
-			<figure>
-				<button id="open-modal" type="button">Open Modal</button>
+			<div class="example">
+				<figure>
+					<button id="open-modal" type="button">Open Modal</button>
 
-				<dialog id="modal-demo">
-					<h3>Dare to Doubt</h3>
+					<dialog id="modal-demo">
+						<h3>Dare to Doubt</h3>
 
-					<p>"When we dare to doubt what we are told and take a fresh look at what's going on, we are in for lots of pleasant and fascinating and useful surprises. A new and more satisfying way of life begins to open up, just by noticing what we see."</p>
+						<p>"When we dare to doubt what we are told and take a fresh look at what's going on, we are in for lots of pleasant and fascinating and useful surprises. A new and more satisfying way of life begins to open up, just by noticing what we see."</p>
 
-					<p>- Douglas Harding</p>
-					
-				</dialog>
-			</figure>
+						<p>- Douglas Harding</p>
+						
+					</dialog>
+				</figure>
+			</div>
+
 		</section>
 
 		<section>
@@ -199,7 +202,7 @@
 			</div>
 
 			
-				<h3>Select</h3>
+			<h3>Select</h3>
 
 			<div class="example">
 				<figure>
@@ -246,15 +249,76 @@
 
 		</section>
 
+
+		<section>
+			<h2>Navigation</h2>
+
+			<h3>Primary Navigation</h3>
+
+			<div class="example">
+				<figure>
+			
+					<nav class="nav-primary">
+						<ul>
+							<li><a href="https://www.google.com">Item 1</a></li>
+							<li><a class="current-page-primary" href="https://www.google.com">Item 2</a></li>
+							<li><a href="https://www.google.com">Item 3</a></li>
+							<li><a href="https://www.google.com">Item 4</a></li>
+						</ul>
+					</nav>
+
+				</figure>
+
+			</div>
+
+
+			<h3>Secondary Navigation</h3>
+
+			<div class="example">
+				<figure>
+					<div class="nav-secondary-box">
+						<nav class="nav-secondary">
+							<ul>
+								<li><a href="https://www.google.com">Clients</a></li>
+							
+								<li>
+									<details class="nav-secondary-details">
+										<summary class="nav-secondary-summary"><span class="current-page-primary">Event Services</span></summary>
+
+											<nav class="nav-secondary-nested">
+												<ul>
+													<li><a href="https://www.google.com">Concerts & Music Festivals</a></li>
+													<li><a class="current-page-secondary" href="https://www.google.com">Parties</a></li>
+													<li><a href="https://www.google.com">Shows</a></li>
+													<li><a href="https://www.google.com">Corporate Events</a></li>
+												</ul>
+											</nav>
+									</details>
+								</li>
+
+								<li><a href="https://www.google.com">Press</a></li>
+
+								<li><a href="https://www.google.com">Blog</a></li>
+							</ul>
+						</nav>
+
+					</div>
+				</figure>
+			</div>
+
+		</section>
+
 	</main>
 
 
 	<footer>
-		<p>2020 &copy; Happening Inc.</p>
+		<div class="footer-text">
+			<p>2020 &copy; Happening Inc.</p>
 
-		<p>Epoch Design System was designed with precision and intention by Kelly Huang.</p>
+			<p>Epoch Design System was designed with precision and intention by Kelly Huang.</p>
 
-		<p>Kelly is a UX/UI designer based in Austin, TX. She loves dogs, 80s synth pop, and outdoor running. Fascinated by the intersection between the sciences & the arts, she hopes to connect, enrich, and inspire others through data & empathy-driven work.</p>
+			<p>Kelly is a UX/UI designer based in Austin, TX. She loves dogs, 80s synth pop, and outdoor running. Fascinated by the intersection between the sciences & the arts, she hopes to connect, enrich, and inspire others through data & empathy-driven work.</p>
+		</div>
 
 		<nav>
 			<ul>
