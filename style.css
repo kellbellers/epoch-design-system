@@ -808,7 +808,87 @@ Navigation Components
 }
 
 /*================================
-Footer Component
+Notification Components
+==================================*/
+
+.error-msg, .warning-msg, .info-msg, .success-msg {
+	display: flex;
+	align-items: center;
+}
+
+.error-msg p, .warning-msg p, .info-msg p, .success-msg p, .error-msg i, .warning-msg i, .info-msg i, .success-msg i {
+	padding: .5rem 1.5rem;
+}
+
+.error-msg {
+	background-color: #FFEBEA;
+	border: 1px solid #DC1D10;
+	border-radius: .3rem;
+}
+
+.warning-msg {
+	background-color: #FFF9D7;
+	border: 1px solid #D6B300;
+	border-radius: .3rem;
+}
+
+.info-msg {
+	background-color: #E2F5FF;
+	border: 1px solid #0655CB;
+	border-radius: .3rem;
+}
+
+.success-msg {
+	background-color: #E3F9E1;
+	border: 1px solid #05901C;
+	border-radius: .3rem;
+}
+
+.fa-times-circle {
+	color: red;
+}
+
+.fa-warning{
+	color: #FAC303;
+}
+
+.fa-info-circle {
+	color: #2F82FF;
+}
+
+.fa-check {
+	color: #06BE23;
+}
+
+
+/*================================
+Hero Components
+==================================*/
+
+.hero-block {
+	background-image: url(images/teal-festive-flipped.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	max-height: 50vh;
+	max-width: 100vh;
+	padding: 12rem;
+	margin: 0;
+}
+
+.hero-title {
+	font-size: 5.5vh;
+	width: 32vh;
+}
+
+.hero-caption {
+	font-size: 3vh;
+	width: 50vh;
+}
+
+
+/*================================
+Footer Components
 ==================================*/
 
 .footer-text {
