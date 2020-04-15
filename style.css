@@ -200,7 +200,7 @@ a:visited {
 }
 
 a:hover {
-	color: var(--color-teal-muted-light);
+	color: var(--color-teal-muted-deep);
 }
 
 a:focus {
@@ -208,7 +208,7 @@ a:focus {
 }
 
 a:active {
-	color: var(--color-teal-true);
+	color: var(--color-teal-muted-light);
 }
 
 .featured-text {
@@ -691,7 +691,7 @@ textarea {
 	border-color: red;
 }
 
-.disabled-input {
+[disabled] {
 	background-color: rgba(148, 148, 148, .3);
 	border-color: var(--color-slate);
 }
@@ -870,22 +870,88 @@ Hero Components
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	max-height: 50vh;
-	max-width: 100vh;
-	padding: 12rem;
+	min-height: 70vh;
 	margin: 0;
 }
 
+.hero-block div {
+	padding: 5rem 3rem;
+}
+
 .hero-title {
-	font-size: 5.5vh;
-	width: 32vh;
+	font-size: 3rem;
+	margin: 1rem;
+	max-width: 6rem;
+	text-transform: uppercase;
 }
 
 .hero-caption {
-	font-size: 3vh;
-	width: 50vh;
+	font-size: 1.5rem;
+	margin: 1rem;
+	max-width: 18rem;
 }
 
+@media (min-width: 660px) {
+	
+	.hero-block div {
+		padding: 7rem 4rem;
+	}		
+
+}
+
+@media (min-width: 900px) {
+
+	.hero-block div {
+		padding: 9rem 5rem;
+	}	
+
+}
+
+@media (min-width: 1200px) {
+
+	.hero-block div {
+		padding: 9rem 12rem;
+	}	
+
+}
+
+/*================================
+Card Components
+==================================*/
+
+.card {
+	background-color: var(--color-snow);
+	border: 2px solid var(--color-smoke-dark-extra);
+	border-radius: .5rem;
+	box-shadow: 2px 2px 4px var(--color-smoke);
+	margin: 0 auto;
+	max-width: 20rem;
+	padding: 1.2rem;
+}
+
+.card img {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+}
+
+.card div {
+	max-width: 19rem;
+	margin: 0 auto;
+}
+
+.card-heading {
+	margin: 1.3rem 0 1.2rem;
+}
+
+.title {
+	font-weight: 600;
+	color: var(--color-bubblegum-muted);
+}
+
+.client-matters {
+	text-transform: uppercase;
+}
 
 /*================================
 Footer Components
